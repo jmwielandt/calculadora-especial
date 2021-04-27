@@ -1,0 +1,26 @@
+extends Node2D
+
+class_name MainScene
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+var x
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+    x = Label.new()
+    x.text = "dos!"
+    add_child(x)
+    print("Hola!")
+    
+    
+    pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#    pass
+
+
+
