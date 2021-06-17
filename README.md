@@ -1,4 +1,4 @@
-# calculadora-especial
+# La calculadora más rara.
 Calculadora que tiene las operaciones que otras no ofrecen.
 
 ## Características

@@ -1,0 +1,126 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Grades.gd" type="Script" id=1]
+
+[node name="Grades" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 177.0
+margin_right = 323.0
+margin_bottom = 800.0
+custom_constants/separation = 10
+alignment = 1
+
+[node name="LabelExigencia" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 270.0
+margin_right = 146.0
+margin_bottom = 284.0
+text = "Escala (% para aprobar)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 294.0
+margin_right = 146.0
+margin_bottom = 318.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scale_percentage" type="LineEdit" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 36.0
+margin_right = 94.0
+margin_bottom = 24.0
+text = "60"
+align = 1
+
+[node name="LabelPerc" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 98.0
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
+text = "%"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+margin_top = 328.0
+margin_right = 146.0
+margin_bottom = 332.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LabelTotalScore" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 342.0
+margin_right = 146.0
+margin_bottom = 356.0
+text = "Puntaje Total"
+align = 1
+
+[node name="total_score" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+margin_top = 366.0
+margin_right = 146.0
+margin_bottom = 390.0
+align = 1
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+margin_top = 400.0
+margin_right = 146.0
+margin_bottom = 404.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 414.0
+margin_right = 146.0
+margin_bottom = 428.0
+text = "Puntaje Obtenido"
+align = 1
+
+[node name="obtained_score" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+margin_top = 438.0
+margin_right = 146.0
+margin_bottom = 462.0
+align = 1
+
+[node name="Calculate" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 472.0
+margin_right = 146.0
+margin_bottom = 492.0
+text = "Calcular"
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+margin_top = 502.0
+margin_right = 146.0
+margin_bottom = 506.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Result" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 516.0
+margin_right = 146.0
+margin_bottom = 530.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Calculate" to="." method="_on_Calculate_pressed"]

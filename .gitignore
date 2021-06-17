@@ -1,2 +1,5 @@
+/target
+/android
 /.import
-**/*.import
+/**/*.import
+/export_presets.cfg

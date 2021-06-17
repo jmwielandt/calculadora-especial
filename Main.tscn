@@ -1,6 +1,61 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://AppMenu.gd" type="Script" id=2]
+[ext_resource path="res://menu.png" type="Texture" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.793701
+margin_right = -0.793701
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 41.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AppMenu" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 47.0
+margin_bottom = 41.0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+items = [ "Calculadora de notas", null, 0, false, false, 0, 0, null, "", false, "Conversor de semillas", null, 0, false, true, 1, 0, null, "", false ]
+script = ExtResource( 2 )
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+margin_left = 57.0
+margin_right = 61.0
+margin_bottom = 41.0
+
+[node name="AppTitle" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 71.0
+margin_top = 13.0
+margin_right = 196.0
+margin_bottom = 27.0
+text = "Weirdest Calculator"
+align = 1
+valign = 1
+
+[node name="ChildWidgetContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 61.0
+margin_right = 500.0
+margin_bottom = 61.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
